@@ -68,8 +68,8 @@ Then open the URL shown in the terminal (Vite's default is `http://localhost:517
 - [x] Side effects with `useEffect`
 - [x] Client-side routing
 - [x] Forms and reusable components
-- [ ] Fetching data from an API
-- [ ] Context API
+- [x] Fetching data from an API
+- [x] Context API
 - [ ] Deploying to Vercel or Netlify
 
 ---
