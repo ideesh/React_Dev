@@ -70,7 +70,7 @@ Then open the URL shown in the terminal (Vite's default is `http://localhost:517
 - [x] Forms and reusable components
 - [x] Fetching data from an API
 - [x] Context API
-- [ ] Deploying to Vercel or Netlify
+- [X] Deploying to Vercel or Netlify
 
 ---
 
