@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  background: #0f1226;
+  font-family: system-ui, sans-serif;
+  color: #fff;
+}
+
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* cards fade and rise in when the page loads */
+.card {
+  background: #1b1f3d;
+  padding: 24px;
+  border-radius: 16px;
+  width: 280px;
+  text-align: center;
+  animation: fadeUp 0.6s ease both;
+}
+.card:nth-child(2) { animation-delay: 0.15s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+/* buttons: lift on hover, squash on press */
+.btn {
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover  { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(0,0,0,0.4); }
+.btn:active { transform: scale(0.92); }
+.green { background: #22c55e; }
+.red   { background: #ef4444; }
+.blue  { background: #3b82f6; }
+.gray  { background: #64748b; }
+
+/* number box pops each time the number changes */
+.number-box {
+  min-width: 70px;
+  padding: 12px;
+  font-size: 32px;
+  font-weight: bold;
+  background: #0f1226;
+  border-radius: 12px;
+  border: 2px solid #3b82f6;
+}
+.pop { animation: pop 0.3s ease; }
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.35); color: #ffd23f; }
+  100% { transform: scale(1); }
+}
+
+/* bulb: dim when off, glowing pulse when on */
+.bulb {
+  font-size: 64px;
+  margin: 16px 0;
+  transition: filter 0.4s, transform 0.4s;
+}
+.bulb.off { filter: grayscale(1) brightness(0.5); }
+.bulb.on  {
+  filter: drop-shadow(0 0 14px #ffd23f);
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.12); filter: drop-shadow(0 0 28px #ffd23f); }
+}
+
+/* text input: glows when focused */
+.text-input {
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #334155;
+  background: #0f1226;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.text-input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+/* typed text slides in */
+.slide-in { animation: slideIn 0.4s ease; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
