@@ -12,7 +12,7 @@ export default function App() {
       <div className="card">
         <h2>Number</h2>
         <div className="row">
-          <button className="btn red" onClick={() => setCount(count - 1)}>
+          <button className="btn red"  disabled={count <= 0} onClick={() => setCount(count - 1)}>
             −
           </button>
 
