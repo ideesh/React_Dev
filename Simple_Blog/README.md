@@ -1,16 +1,50 @@
-# React + Vite
+# ✍️ React Blog App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple blog app built with React. Write a title and some content, hit
+publish, and your post appears instantly below the form.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add blog posts with a title and content
+- Newest post is shown first
+- Animated UI: moving gradient background, bouncing cards, glowing inputs
+- Empty-state message when there are no posts
+- Respects reduced-motion system settings
 
-## React Compiler
+## Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (useState hook)
+- CSS animations and transitions
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+1. Clone the repo
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+3. Start the app
+   ```bash
+   npm run dev
+   ```
+
+## How It Works
+
+- `title` and `content` states hold the form inputs
+- `blogs` state holds the list of posts
+- Submitting the form adds a new post object to the top of the list
+- `blogs.map()` renders each post as a card
+
+## Notes
+
+Posts are stored in React state only, so they reset when the page is
+refreshed.
+
+## Future Ideas
+
+- Save posts with localStorage
+- Delete and edit posts
+- Dark mode toggle
