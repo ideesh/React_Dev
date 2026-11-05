@@ -67,7 +67,7 @@ export default function App() {
 
         {/* Submit button: clicking it triggers the form's onSubmit handler */}
         <button type="submit" className="submit-btn">
-          Publish 🚀
+          Publish your blog 🚀
         </button>
       </form>
 
